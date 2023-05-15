@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import RegisterScreen from './RegisterScreen';
+import FormAddUsers from './components/form-add-user/FormAddUsers';
+import Container from '@mui/material/Container';
+import ResponsiveAppBar from './components/navbar/ResponsiveAppBar';
+import DataGridUsers from './components/data-grid-add-user/DataGridUsers';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RegisterScreen />
+    <ResponsiveAppBar/>
+     <Container className="container"> 
+      <FormAddUsers/> 
+      <DataGridUsers/>
+    </Container>
   </React.StrictMode>
 );
 
